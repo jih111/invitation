@@ -21,6 +21,8 @@ const Home = () => {
   });
 
   const initMap = () => {
+    if (typeof window === "undefined") return;
+
     window.kakao.maps.load(function () {
       const { kakao } = window;
       var container = document.getElementById("map");
