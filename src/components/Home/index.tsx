@@ -4,14 +4,17 @@ import "aos/dist/aos.css";
 
 import * as S from "./styled";
 import {
-  inter,
-  lora,
   sourceCodePro400,
   sourceCodePro500,
   sourceCodePro700,
 } from "styles/fonts";
 import Script from "next/script";
 
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
 const Home = () => {
   const mapRef = useRef(null);
   useEffect(() => {
